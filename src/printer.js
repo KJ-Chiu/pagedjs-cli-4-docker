@@ -36,7 +36,7 @@ class Printer extends EventEmitter {
   async setup() {
     let puppeteerOptions = {
       headless: this.headless,
-      args: ["--disable-dev-shm-usage", "--export-tagged-pdf"],
+      args: ["--no-sandbox", "--disable-dev-shm-usage", "--export-tagged-pdf"],
       ignoreHTTPSErrors: this.ignoreHTTPSErrors
     };
 
